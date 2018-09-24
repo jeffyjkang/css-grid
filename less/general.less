@@ -6,6 +6,7 @@ body {
   max-width: 1250px;
   font-size: 1.6rem;
   margin: 0 auto;
+  background-color: @rain;
   display: grid;
   border: 1px solid black;
   grid-template-areas:
@@ -16,10 +17,12 @@ body {
 header {
   grid-area: header;
   background-color: @mist;
+  color: white;
 }
 .mainContent {
   grid-area: main;
   display: grid;
+  border: 1px solid white;
   grid-template-areas:
     ". mainImg mainImg mainImg ."
     "bio bio bio bio bio"
@@ -27,7 +30,7 @@ header {
     "indepth indepth indepth indepth indepth";
   .mainImageContainer {
     grid-area: mainImg;
-    background-color: @stone;
+    border: 1px solid white;
   }
   .biography {
     grid-area: bio;
@@ -36,10 +39,12 @@ header {
     .biographyText {
       grid-area: bioText;
       background-color: @shadow;
+      color: @autumn_foliage;
+      border: 1px solid white;
     }
-    .bioImg {
+    .biographyImg {
       grid-area: bioImg;
-      background-color: @autumn_foliage;
+      border: 1px solid white;
     }
   }
   .personal {
@@ -48,19 +53,25 @@ header {
     grid-template-areas: "persImg persImg persText persText persText";
     .persImg {
       grid-area: persImg;
-      background-color: @waterfall;
+      border: 1px solid white;
     }
     .personalText {
       grid-area: persText;
       background-color: @moss;
+      color: @blue_black;
+      border: 1px solid white;
     }
   }
   .indepth {
     grid-area: indepth;
     background-color: @thunder_cloud;
+    color: @waterfall;
+    border: 1px solid white;
   }
 }
 footer {
   grid-area: footer;
   background-color: @greenery;
+  color: @cadet_blue;
+  border: 1px solid white;
 }
