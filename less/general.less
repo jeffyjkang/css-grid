@@ -1,0 +1,66 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1250px;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  display: grid;
+  border: 1px solid black;
+  grid-template-areas:
+    ". header header header ."
+    "main main main main main"
+    ". footer footer footer .";
+}
+header {
+  grid-area: header;
+  background-color: @mist;
+}
+.mainContent {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    ". mainImg mainImg mainImg ."
+    "bio bio bio bio bio"
+    "personal personal personal personal personal"
+    "indepth indepth indepth indepth indepth";
+  .mainImageContainer {
+    grid-area: mainImg;
+    background-color: @stone;
+  }
+  .biography {
+    grid-area: bio;
+    display: grid;
+    grid-template-areas: "bioText bioText bioText bioImg bioImg";
+    .biographyText {
+      grid-area: bioText;
+      background-color: @shadow;
+    }
+    .bioImg {
+      grid-area: bioImg;
+      background-color: @autumn_foliage;
+    }
+  }
+  .personal {
+    grid-area: personal;
+    display: grid;
+    grid-template-areas: "persImg persImg persText persText persText";
+    .persImg {
+      grid-area: persImg;
+      background-color: @waterfall;
+    }
+    .personalText {
+      grid-area: persText;
+      background-color: @moss;
+    }
+  }
+  .indepth {
+    grid-area: indepth;
+    background-color: @thunder_cloud;
+  }
+}
+footer {
+  grid-area: footer;
+  background-color: @greenery;
+}

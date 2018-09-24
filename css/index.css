@@ -1,0 +1,193 @@
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  max-width: 1250px;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  display: grid;
+  border: 1px solid black;
+  grid-template-areas: ". header header header ." "main main main main main" ". footer footer footer .";
+}
+header {
+  grid-area: header;
+  background-color: #90afc5;
+}
+.mainContent {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: ". mainImg mainImg mainImg ." "bio bio bio bio bio" "personal personal personal personal personal" "indepth indepth indepth indepth indepth";
+}
+.mainContent .mainImageContainer {
+  grid-area: mainImg;
+  background-color: #336b87;
+}
+.mainContent .biography {
+  grid-area: bio;
+  display: grid;
+  grid-template-areas: "bioText bioText bioText bioImg bioImg";
+}
+.mainContent .biography .biographyText {
+  grid-area: bioText;
+  background-color: #2a3132;
+}
+.mainContent .biography .bioImg {
+  grid-area: bioImg;
+  background-color: #763626;
+}
+.mainContent .personal {
+  grid-area: personal;
+  display: grid;
+  grid-template-areas: "persImg persImg persText persText persText";
+}
+.mainContent .personal .persImg {
+  grid-area: persImg;
+  background-color: #68829e;
+}
+.mainContent .personal .personalText {
+  grid-area: persText;
+  background-color: #aebd38;
+}
+.mainContent .indepth {
+  grid-area: indepth;
+  background-color: #505160;
+}
+footer {
+  grid-area: footer;
+  background-color: #6fb98f;
+}
