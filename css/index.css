@@ -149,9 +149,18 @@ body {
   grid-row-gap: 1rem;
   grid-template-areas: ". header header header ." "main main main main main" ". footer footer footer .";
 }
+body header {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+}
 body h1 {
   font-size: 2.5rem;
   font-weight: bold;
+}
+body footer {
+  font-size: 3rem;
+  font-style: oblique;
 }
 header {
   grid-area: header;
