@@ -133,6 +133,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.border {
+  border: 1px solid white;
+}
 html {
   font-size: 62.5%;
 }
@@ -142,17 +145,24 @@ body {
   margin: 0 auto;
   background-color: #2c7873;
   display: grid;
-  border: 1px solid black;
+  border: 1px solid white;
+  grid-row-gap: 1rem;
   grid-template-areas: ". header header header ." "main main main main main" ". footer footer footer .";
+}
+body h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 header {
   grid-area: header;
   background-color: #90afc5;
   color: white;
+  border: 1px solid white;
 }
 .mainContent {
   grid-area: main;
   display: grid;
+  grid-row-gap: 1rem;
   border: 1px solid white;
   grid-template-areas: ". mainImg mainImg mainImg ." "bio bio bio bio bio" "personal personal personal personal personal" "indepth indepth indepth indepth indepth";
 }
@@ -163,6 +173,7 @@ header {
 .mainContent .biography {
   grid-area: bio;
   display: grid;
+  grid-column-gap: 1rem;
   grid-template-areas: "bioText bioText bioText bioImg bioImg";
 }
 .mainContent .biography .biographyText {
@@ -171,13 +182,14 @@ header {
   color: #763626;
   border: 1px solid white;
 }
-.mainContent .biography .biographyImg {
+.mainContent .biography .biogImg {
   grid-area: bioImg;
   border: 1px solid white;
 }
 .mainContent .personal {
   grid-area: personal;
   display: grid;
+  grid-column-gap: 1rem;
   grid-template-areas: "persImg persImg persText persText persText";
 }
 .mainContent .personal .persImg {

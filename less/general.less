@@ -8,21 +8,29 @@ body {
   margin: 0 auto;
   background-color: @rain;
   display: grid;
-  border: 1px solid black;
+  .border;
+  grid-row-gap: 1rem;
   grid-template-areas:
     ". header header header ."
     "main main main main main"
     ". footer footer footer .";
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
 }
 header {
   grid-area: header;
   background-color: @mist;
   color: white;
+  .border;
 }
 .mainContent {
   grid-area: main;
   display: grid;
-  border: 1px solid white;
+
+  grid-row-gap: 1rem;
+  .border;
   grid-template-areas:
     ". mainImg mainImg mainImg ."
     "bio bio bio bio bio"
@@ -30,48 +38,51 @@ header {
     "indepth indepth indepth indepth indepth";
   .mainImageContainer {
     grid-area: mainImg;
-    border: 1px solid white;
+    .border;
   }
   .biography {
     grid-area: bio;
     display: grid;
+    grid-column-gap: 1rem;
     grid-template-areas: "bioText bioText bioText bioImg bioImg";
     .biographyText {
+      // height: 50rem;
       grid-area: bioText;
       background-color: @shadow;
       color: @autumn_foliage;
-      border: 1px solid white;
+      .border;
     }
-    .biographyImg {
+    .biogImg {
       grid-area: bioImg;
-      border: 1px solid white;
+      .border;
     }
   }
   .personal {
     grid-area: personal;
     display: grid;
+    grid-column-gap: 1rem;
     grid-template-areas: "persImg persImg persText persText persText";
     .persImg {
       grid-area: persImg;
-      border: 1px solid white;
+      .border;
     }
     .personalText {
       grid-area: persText;
       background-color: @moss;
       color: @blue_black;
-      border: 1px solid white;
+      .border;
     }
   }
   .indepth {
     grid-area: indepth;
     background-color: @thunder_cloud;
     color: @waterfall;
-    border: 1px solid white;
+    .border;
   }
 }
 footer {
   grid-area: footer;
   background-color: @greenery;
   color: @cadet_blue;
-  border: 1px solid white;
+  .border;
 }
